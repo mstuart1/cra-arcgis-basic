@@ -24,4 +24,4 @@ yarn-error.log*
 src/UI/test.css
 .env
 
-
+/public/assets
