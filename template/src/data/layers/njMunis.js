@@ -4,17 +4,19 @@ const url = "https://services1.arcgis.com/ze0XBzU1FXj94DJq/arcgis/rest/services/
 
 const portalId = "95177982e99e46778881d34cb9ac4d99";
 
-const layer = new FeatureLayer({
+export const munis = new FeatureLayer({
   portalItem: {
     id: portalId,
   },
   title: "Municipalities",
-  visible: true,
   authoritativeSource: `https://rutgers.maps.arcgis.com/home/item.html?id=${portalId}`,
   mapService: `https://rutgers.maps.arcgis.com/home/item.html?id=${portalId}`,
   url,
+  oraId: 'munis',
+  visible: false,
+
 });
 
-export const munis = {layerId: 'munis', item: layer, meta: layer}
+
 
 
