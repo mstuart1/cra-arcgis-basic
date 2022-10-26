@@ -1,10 +1,8 @@
-import React, { useRef, useLayoutEffect, useContext }  from 'react'
-import MapView from '@arcgis/core/views/MapView';
-import ArcGISMap from '@arcgis/core/Map';
-import FeatureLayer from '@arcgis/core/layers/FeatureLayer';
-import { AppContext } from '../context';
+import React, { useRef, useEffect }  from 'react'
 import styled from 'styled-components';
-import createMapView from '../tools/createMapView';
+import ArcGISMap from '@arcgis/core/Map'
+import MapView from '@arcgis/core/views/MapView'
+
 
 const Styles = {
     ViewDiv: styled.div`
@@ -14,15 +12,22 @@ const Styles = {
 
 export default function CoreMap() {
   const mapRef = useRef(null);
-  const { setLayerView, setView, view} = useContext(AppContext);
+  
+  useEffect (() => { 
+      const map = new ArcGISMap({  
+          basemap: 'topo-vector'
+      })
+      const view = new MapView(
+        {
+          map,
+          container: mapRef.current,
+          center: [-74.5, 40],
+          zoom: 9,
+      })
+      view.ui.move('zoom', 'bottom-right')
+    }, [])
 
-  useLayoutEffect(() => {
-    if (mapRef.current) {
-        setView(createMapView(mapRef.current, {basemap: 'topo-vector'},))
-      // view.whenLayerView(layer).then(setLayerView);
-    }
-  }, [mapRef]);
-  view?.ui.move('zoom', 'bottom-right')
+  
 
-  return <Styles.ViewDiv className="view-div" ref={mapRef}></Styles.ViewDiv>;
+  return <Styles.ViewDiv ref={mapRef}></Styles.ViewDiv>;
 }

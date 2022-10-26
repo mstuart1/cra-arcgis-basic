@@ -2,15 +2,8 @@
     "package": {
       "dependencies": {
         "@arcgis/core": "^4.22.2",
-        "axios": "^0.25.0",
-        "@esri/calcite-components": "^1.0.0-beta.95",
         "@esri/calcite-components-react": "^0.27.0",
-        "react-redux": "^7.2.6",
         "react-router-dom": "^6.2.1",
-        "redux": "^4.1.2",
-        "redux-devtools-extension": "^2.13.9",
-        "redux-persist": "^6.0.0",
-        "redux-thunk": "^2.4.1",
         "styled-components": "^5.3.3"
       }
     }
