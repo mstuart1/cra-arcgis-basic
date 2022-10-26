@@ -1,5 +1,9 @@
-import { projects } from "./projects";
+import { munis } from "./njMunis";
+import { counties } from "./njCounties";
 
-export const allLayers = [
-    projects,
+const allLayers = [
+    munis,
+    counties,
 ]
+
+export default allLayers
