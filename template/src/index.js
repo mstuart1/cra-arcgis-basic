@@ -1,12 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css'
+import { createRoot } from 'react-dom/client';
+import { setAssetPath } from '@esri/calcite-components/dist/components'
+import AppContextProvider from './context';
 
-const rootElement = document.getElementById('root')
+setAssetPath("https://unpkg.com/@esri/calcite-components/dist/calcite/assets")
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'));
+
+root.render(
     <React.StrictMode>
-        <App/>
-    </React.StrictMode>, rootElement
+        <AppContextProvider>
+            <App />
+        </AppContextProvider>
+    </React.StrictMode>
 )
+
+
