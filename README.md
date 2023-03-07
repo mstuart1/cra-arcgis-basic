@@ -6,4 +6,6 @@ This template was intended to get started with a working arcgis map with minimal
 
 This app uses styled-components to manage css.
 
+To use this template, download the files and run `npx create-react-app [my app name] --template file:[path to this folder]`.
+
 created 2022-01-28, updated 2023-03-06 by Michelle Stuart
