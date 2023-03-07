@@ -1,8 +1,8 @@
 {
     "package": {
       "dependencies": {
-        "@arcgis/core": "^4.22.2",
-        "@esri/calcite-components-react": "^0.27.0",
+        "@arcgis/core": "^4.26.5",
+        "@esri/calcite-components-react": "^1.0.5",
         "react-router-dom": "^6.2.1",
         "styled-components": "^5.3.3"
       }

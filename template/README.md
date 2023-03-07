@@ -6,4 +6,4 @@ This template was intended to get started with a working arcgis map with minimal
 
 This app uses styled-components to manage css.
 
-created 2022-01-28 by Michelle Stuart
+created 2022-01-28, updated 2023-03-06 by Michelle Stuart
